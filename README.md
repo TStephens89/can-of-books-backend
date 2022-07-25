@@ -34,7 +34,26 @@ Clone this repo to your own account with the green "Use this template" button. T
 <!-- See below -->
 
 ## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+- **Logistical**
+  - *What hours will you be available to communicate?* During class and business hours, and available for quick questions, etc. during the evening
+  - *What platform will you use to communicate (ie. Slack, phone …)?* Slack
+  - *How often will you take breaks?* Try to take two good (step away from computer) breaks per day
+  - *What is your plan if you start to fall behind?* Schedule a time to meet with TAs together so we can make sure we're on the same page
+
+- **Cooperative**
+  - *Make a list of each person’s strengths.* Lucy: CSS/front-end stuff; Trevor: back-end stuff
+  - *How can you best utilize these strengths in the development of your application?* Divided project based on which end we felt strongest in
+  - *In what areas do you each want to develop greater strength?* Syntax, when to use different features of the code (state vs. props), troubleshooting/debugging
+  - *Knowing that every person in your team needs to understand the code, how do you plan to approach the day-to-day development?* Communicate with each other; make sure to ask questions as soon as they come up
+
+- **Conflict Resolution**
+  - *What will your team do if one person is pulling all the weight while the other person is not contributing?* First try talking to the other person; if they don't respond, work with Jacob to figure out how to proceed
+  - *What will your team do if one person is taking over the project and not letting the other member contribute?* Same as above - try to talk to them, then work with Jacob
+  - *How will you approach each other and the challenge of building an application knowing that it is impossible for two people to be at the exact same place in understanding and skill level?* Be willing to share knowledge & collaborate
+
+
+
 - Collaborated with Lucy Gelderloos
 Time Estimates
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:

@@ -1,11 +1,15 @@
 'use strict';
 
 require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
-const mongoose = require("mongoose");
+
 const app = express();
+
 app.use(cors());
+app.use(express.json());
+const mongoose = require('mongoose');
 mongoose.connect(process.env.DATABASE_URL);
 const PORT = process.env.PORT || 3002;
 const Book = require('./Books')
@@ -15,6 +19,7 @@ app.get('/test', (request, response) => {
   
 })
 app.get('/books',getBooks) 
+app.post('/books',postBooks)
 async function getBooks(request,response){
   try {
     let bookResponse = await Book.find({})
@@ -25,6 +30,25 @@ async function getBooks(request,response){
     response.send('no books found!').status(400)
   }
 }
+async function postBooks(request, response){
+  console.log(request)
+  try {
+    const book = await Book.create(request.body)
+    response.status(201).send(book)
+    
+  } catch (error) {
+    console.log(error.message)
+    response.send('no book was created').status(400)
+  }
+}
+// async function deleteBooks(request, response){
+//   try {
+//     const remove = await Book.delete(request.body)
+//     response.status(201)
+//   } catch () {
+    
+//   }
+// }
 let addBook = new Book({
   name:'',
   description:'',

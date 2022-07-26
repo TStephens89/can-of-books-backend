@@ -20,6 +20,7 @@ app.get('/test', (request, response) => {
 })
 app.get('/books',getBooks) 
 app.post('/books',postBooks)
+// app.delete('/books',deleteBooks)
 async function getBooks(request,response){
   try {
     let bookResponse = await Book.find({})
@@ -41,10 +42,20 @@ async function postBooks(request, response){
     response.send('no book was created').status(400)
   }
 }
+app.delete('/books/:id', async (request, response, next) => {
+
+  let id = request.params.id;
+  try {
+    let removeBook = await removeBook.deleteOne({ _id: id });
+    response.send(removeBook);
+  } catch(e) {
+    next(e);
+  }
+});
 // async function deleteBooks(request, response){
 //   try {
 //     const remove = await Book.delete(request.body)
-//     response.status(201)
+//     response.status(201).
 //   } catch () {
     
 //   }

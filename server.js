@@ -14,42 +14,42 @@ mongoose.connect(process.env.DATABASE_URL);
 const PORT = process.env.PORT || 3002;
 const Book = require('./Books')
 app.get('/test', (request, response) => {
-  
+
   response.send('test request received')
-  
+
 })
-app.get('/books',getBooks) 
-app.post('/books',postBooks)
+app.get('/books', getBooks)
+app.post('/books', postBooks)
 // app.delete('/books',deleteBooks)
-async function getBooks(request,response){
+async function getBooks(request, response) {
   try {
     let bookResponse = await Book.find({})
     response.send(bookResponse);
-    
+
   } catch (error) {
     console.log(error.message)
     response.send('no books found!').status(400)
   }
 }
-async function postBooks(request, response){
+async function postBooks(request, response) {
   console.log(request)
   try {
     const book = await Book.create(request.body)
     response.status(201).send(book)
-    
+
   } catch (error) {
     console.log(error.message)
     response.send('no book was created').status(400)
   }
 }
-app.delete('/books/:id', async (request, response, next) => {
-
+app.delete('/books/:id', async (request, response) => {
   let id = request.params.id;
   try {
-    let removeBook = await removeBook.deleteOne({ _id: id });
-    response.send(removeBook);
-  } catch(e) {
-    next(e);
+    await Book.findByIdAndDelete(id);
+    response.status(204).send('the selected book was deleted');
+  } catch (error) {
+    console.error(error);
+    response.status(404).send(`Unable to delete book with id ${id}`)
   }
 });
 // async function deleteBooks(request, response){
@@ -57,12 +57,12 @@ app.delete('/books/:id', async (request, response, next) => {
 //     const remove = await Book.delete(request.body)
 //     response.status(201).
 //   } catch () {
-    
+
 //   }
 // }
 let addBook = new Book({
-  name:'',
-  description:'',
+  name: '',
+  description: '',
   status: true,
 })
 addBook.save

@@ -11,7 +11,7 @@ const BookSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ["Lucy's favorite book", "Trevor's favorite book"],
+    required: true,
   },
 });
 

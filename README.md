@@ -58,12 +58,12 @@ Clone this repo to your own account with the green "Use this template" button. T
 Time Estimates
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
-Name of feature: ________________________________
+Name of feature: ______________Storage__________________
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: ___2 hours__
 
-Start time: _____
+Start time: __3:00___
 
-Finish time: _____
+Finish time: __6:00___
 
-Actual time needed to complete: _____
+Actual time needed to complete: __3 hours___

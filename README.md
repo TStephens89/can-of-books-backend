@@ -1,19 +1,6 @@
-# Start your own "Can of Books" App
+# Can of Books
 
-This repository has starter code to begin work on creating your own online bookshelf.
-
-## What can books do?
-
-Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
-
-## Use this template
-
-Clone this repo to your own account with the green "Use this template" button. Then, add any collaborators. Now you are ready to start adding features! Deploy your site to let the world know which books have had the greatest impact on you, and what's recommended. Enjoy!
-
-
-# Project Name
-
-**Author**: Team Member Names Goes Here
+**Author**: Lucy Gelderloos, Trevor Stephens
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
@@ -26,14 +13,44 @@ Clone this repo to your own account with the green "Use this template" button. T
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+7/25/2022 6:30 PM - App can retrieve & display books from server
 
 ## Estimates
-<!-- See below -->
+
+Name of feature: Lab 11, Setup
+
+Estimate of time needed to complete: 1h
+
+Start time: 3:00 PM
+
+Finish time: 4:15 PM
+
+Actual time needed to complete: 1.25h
+
+Name of feature: Lab 11, Storage
+
+Estimate of time needed to complete: 2h
+
+Start time: 3:00 PM
+
+Finish time: 6:00 PM
+
+Actual time needed to complete: 2h, with breaks to work on setup
+
+Name of feature: Lab 11, Setup
+
+Estimate of time needed to complete: 2
+
+Start time: 4:00 PM
+
+Finish time: 6:30 PM
+
+Actual time needed to complete: 2.5h
 
 ## Credit and Collaborations
+
+### Team Agreement
 
 - **Logistical**
   - *What hours will you be available to communicate?* During class and business hours, and available for quick questions, etc. during the evening
@@ -52,18 +69,8 @@ Clone this repo to your own account with the green "Use this template" button. T
   - *What will your team do if one person is taking over the project and not letting the other member contribute?* Same as above - try to talk to them, then work with Jacob
   - *How will you approach each other and the challenge of building an application knowing that it is impossible for two people to be at the exact same place in understanding and skill level?* Be willing to share knowledge & collaborate
 
+## Team Notes
 
+Deployed front end: https://dashboard.heroku.com/apps/can-of-books-front
 
-- Collaborated with Lucy Gelderloos
-Time Estimates
-For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
-
-Name of feature: ________________________________
-
-Estimate of time needed to complete: _____
-
-Start time: _____
-
-Finish time: _____
-
-Actual time needed to complete: _____
+Deployed back end: https://can-of-books-backend123.herokuapp.com/

@@ -52,6 +52,18 @@ app.delete('/books/:id', async (request, response) => {
     response.status(404).send(`Unable to delete book with id ${id}`)
   }
 });
+
+app.put('/books/:id', async (request, response) => {
+  try {
+    
+    const { title, description, status } = request.body;
+    const updatedBook = await Book.findByIdAndUpdate(request.params.id, { title, description, status }, { new: true, overwrite: true });
+    response.send(updatedBook);
+  } catch (error) {
+    console.error(error);
+    response.status(404).send(`Unable to update book with id ${id}`
+)}  
+});
 // async function deleteBooks(request, response){
 //   try {
 //     const remove = await Book.delete(request.body)

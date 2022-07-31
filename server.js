@@ -4,7 +4,8 @@ require('dotenv').config();
 
 const express = require('express');
 const cors = require('cors');
-
+const jwt = require('jsonwebtoken');
+const jwksClient = require('jwks-rsa');
 const app = express();
 
 app.use(cors());
@@ -13,6 +14,31 @@ const mongoose = require('mongoose');
 mongoose.connect(process.env.DATABASE_URL);
 const PORT = process.env.PORT || 3002;
 const Book = require('./Books')
+
+function verifyUser(request, response, next) {
+  try {
+    const token = request.headers.authorization.split(' ')[1];
+    jwt.verify(token, getKey, {}, function(err, user) {
+      request.user = user;
+      next();
+    });
+  } catch(e) {
+    console.log(e);
+    next('not authorized');
+  }
+}
+
+const client = jwksClient({
+  jwksUri: process.env.JWKS_URI, 
+});
+
+function getKey(header, callback) {
+  client.getSigningKey(header.kid, function (err, key) {
+    const signingKey = key.publicKey || key.rsaPublicKey;
+    callback(null, signingKey);
+  });
+}
+
 app.get('/test', (request, response) => {
 
   response.send('test request received')
